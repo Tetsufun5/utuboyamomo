@@ -32,27 +32,29 @@
  </head>
 
  <body>
-    <header id="header" class="areaCmnheader">
-      <div class="areaCmnheader__inner">
-        <div class="areaCmnheader__logo">
+    <header id="header" class="header">
+      <div class="header__inner">
+        <div class="header__logo">
             <a href="./index.html" class="logo"><img src="./img/logo.svg" alt="utuboya momo"></a>
         </div>
 
         <nav id="g-navi">
-            <ul class="areaCmnheader__nav">
-                <li class="areaCmnheader__navLi"><a href="./index.html">utuboya momoのこだわり</a></li>
-                <li class="areaCmnheader__navLi"><a href="./index.html">お菓子のご紹介</a></li>
-                <li class="areaCmnheader__navLi"><a href="./index.html">お問い合わせ</a></li>
-                <li class="areaCmnheader__navLi"><a href="./index.html">お知らせ</a></li>
-                <li class="areaCmnheader__navLi"><a href="./index.html">オンラインショップ</a></li>
+            <ul class="header__nav">
+                <li class="header__navLi"><a href="./index.html">ホーム</a></li>
+                <li class="header__navLi"><a href="./about.html">utuboya momoのこだわり</a></li>
+                <li class="header__navLi"><a href="./kokomi.html">心実シリーズ</a></li>
+                <li class="header__navLi"><a href="./nodoka.html">和華シリーズ</a></li>
+                <li class="header__navLi"><a href="./mitama.html">美玉シリーズ</a></li>
+                <li class="header__navLi"><a href="./news.html">お知らせ</a></li>
+                <li class="header__navLi"><a href="./contact.html">お問い合わせ</a></li>
             </ul>
         </nav>
       </div>
     </header>
 
-    <div class="openbtn"><span></span><span></span><span></span></div>
+    <div class="btn"><span></span><span></span><span></span></div>
 
-    <main>
+    <main class="fixed">
         <section class="fixed">
           <ul class="slider">
             <li class="slider-item slider-item01"><img src="./img/main2.jpg" alt="団子の写真1"></li>
@@ -62,14 +64,13 @@
           <div class="scrolldown1"><span class="sccrolldown1__p">scroll down</span></div>
         </section>
 
-        <section class="areaAbout fixed">
-          <div class="areaAbout__outer">
-            <div class="areaAbout__inner">
-              <div class="areaAbout__inner--title">
+        <section class="aboutCmn fixed">
+            <div class="aboutH__inner">
+              <div class="aboutH__inner--title">
                 <h1 class="h1title">一筋の伝統は、百様のおもてなしへ</h1>
               </div>
 
-              <p class="areaAbout__inner--text">
+              <p class="aboutH__inner--text">
                 愛媛県松山市という地から、７１年にわたり「心、和、美」を理念に<br>
                 「厳選された御菓子」をお届けしてきたうつぼ屋は、令和７年４月よ<br>
                 り新たに「utuboya momo」という名の分店を出店いたしました。<br>
@@ -78,21 +79,20 @@
                 お楽しみください。
               </p>
                 
-              <div class="areaAbout__inner--button">
-                <a href="./index.html" class="cmnButton">utuboya momoのこだわり</a>
+              <div>
+                <a href="./about.html" class="cmnButton">utuboya momoのこだわり</a>
               </div>
             </div>
-          </div>
         </section>
 
-        <section class="areaContent__img fixed">
+        <section class="contentH__Ex--img fixed">
                 <img src="./img/content1.jpg" alt="背景1">
         </section>
 
-        <section class="areaContent fixed">
-          <div class="areaContent__outer">
-            <div class="areaContent__outer--text">
-                <h1 class="areaContent__outer--title h1title">お菓子のご紹介</h1>
+        <section class="contentH__Ex fixed">
+          <div class="contentH__Ex--outer">
+            <div class="contentH__Ex--outerText">
+                <h1 class="contentH__Ex--outerTitle h1title">お菓子のご紹介</h1>
 
                 <p>
                    「心実」シリーズ、「和花」シリーズ、「美玉」シリーズの<br>
@@ -109,154 +109,154 @@
             <img src="./img/section1.jpg" alt="背景1">
         </section>
 
-        <section class="areaContent2 fixed">
+        <section class="contentH fixed">
             <ul class="row">
-                <li class="areContent2__firstbox">
-                        <div class="areContent2__firstbox--text">
-                            <p class="areContent2__firstbox--text1 h2title">心実シリーズ</p>
-                            <p class="areContent2__firstbox--text2">心実（ここみ）は、一つ一つ心を込めて育てられた愛媛県産の果実を使用したシリーズです。餡子の深い甘味と共に、爽やかな果実香る色とりどりの坊っちゃん団子をご堪能ください。</p>
-                            <p class="areContent2__firstbox--button">
-                                <a href="./index.html" class="cmnButton2">一覧はこちら</a>
+                <li class="contentH__firstbox">
+                        <div class="contentH__firstbox--text">
+                            <p class="contentH__firstbox--text1 h2title">心実シリーズ</p>
+                            <p class="contentH__firstbox--text2">心実（ここみ）は、一つ一つ心を込めて育てられた愛媛県産の果実を使用したシリーズです。餡子の深い甘味と共に、爽やかな果実香る色とりどりの坊っちゃん団子をご堪能ください。</p>
+                            <p class="contentH__firstbox--button">
+                            <a href="./kokomi.html" class="cmnButton2">一覧はこちら</a>
                             </p>
                         </div>
                 </li>
                 <li>
                     <a href="./index.html">
                         <div>
-                           <img class="areContent2__firstbox--img" src="./img/団子1.jpg" alt="団子１">
+                           <img class="contentH__firstbox--img" src="./img/団子1.jpg" alt="団子１">
                         </div>
                     </a>
                 </li>
                 <li>
                     <a href="./index.html">
                         <div>
-                           <img class="areContent2__firstbox--img" src="./img/団子2.jpg" alt="団子１">
+                           <img class="contentH__firstbox--img" src="./img/団子2.jpg" alt="団子１">
                         </div>
                     </a>
                 </li>
                 <li>
                     <a href="./index.html">
                         <div>
-                           <img class="areContent2__firstbox--img" src="./img/団子1.jpg" alt="団子１">
+                           <img class="contentH__firstbox--img" src="./img/団子1.jpg" alt="団子１">
                         </div>
                     </a>
                 </li>
                 <li>
                     <a href="./index.html">
                         <div>
-                           <img class="areContent2__firstbox--img" src="./img/団子1.jpg" alt="団子１">
+                           <img class="contentH__firstbox--img" src="./img/団子1.jpg" alt="団子１">
                         </div>
                     </a>
                 </li>
                 <li>
                     <a href="./index.html">
                         <div>
-                           <img class="areContent2__firstbox--img" src="./img/団子1.jpg" alt="団子１">
+                           <img class="contentH__firstbox--img" src="./img/団子1.jpg" alt="団子１">
                         </div>
                     </a>
                 </li>
             </ul>
         </section>
 
-        <section class="areaContent2 fixed">
+        <section class="contentH fixed">
             <ul class="row">
-                <li class="areContent2__firstbox">
-                        <div class="areContent2__firstbox--text">
-                            <p class="areContent2__firstbox--text1 h2title">和華シリーズ　</p>
-                            <p class="areContent2__firstbox--text2">和華（のどか）は、一つ一つ心を込めて育てられた愛媛県産の果実を使用したシリーズです。餡子の深い甘味と共に、爽やかな果実香る色とりどりの坊っちゃん団子をご堪能ください。</p>
-                            <p class="areContent2__firstbox--button">
-                                <a href="./index.html" class="cmnButton2">一覧はこちら</a>
+                <li class="contentH__firstbox">
+                        <div class="contentH__firstbox--text">
+                            <p class="contentH__firstbox--text1 h2title">和華シリーズ</p>
+                            <p class="contentH__firstbox--text2">和華（のどか）は、古くから愛されてきた日本の伝統食材を使用したシリーズです。抹茶や梅など、程よい酸味と苦味を持つ食材は餡子とよく馴染み、優しく華やかな味わいの坊っちゃん団子をお楽しみいただけます。</p>
+                            <p class="contentH__firstbox--button">
+                            <a href="./nodoka.html" class="cmnButton2">一覧はこちら</a>
                             </p>
                         </div>
                 </li>
                 <li>
                     <a href="./index.html">
                         <div>
-                           <img class="areContent2__firstbox--img" src="./img/団子1.jpg" alt="団子１">
+                           <img class="contentH__firstbox--img" src="./img/団子1.jpg" alt="団子１">
                         </div>
                     </a>
                 </li>
                 <li>
                     <a href="./index.html">
                         <div>
-                           <img class="areContent2__firstbox--img" src="./img/団子2.jpg" alt="団子１">
+                           <img class="contentH__firstbox--img" src="./img/団子2.jpg" alt="団子１">
                         </div>
                     </a>
                 </li>
                 <li>
                     <a href="./index.html">
                         <div>
-                           <img class="areContent2__firstbox--img" src="./img/団子1.jpg" alt="団子１">
+                           <img class="contentH__firstbox--img" src="./img/団子1.jpg" alt="団子１">
                         </div>
                     </a>
                 </li>
                 <li>
                     <a href="./index.html">
                         <div>
-                           <img class="areContent2__firstbox--img" src="./img/団子1.jpg" alt="団子１">
+                           <img class="contentH__firstbox--img" src="./img/団子1.jpg" alt="団子１">
                         </div>
                     </a>
                 </li>
                 <li>
                     <a href="./index.html">
                         <div>
-                           <img class="areContent2__firstbox--img" src="./img/団子1.jpg" alt="団子１">
+                           <img class="contentH__firstbox--img" src="./img/団子1.jpg" alt="団子１">
                         </div>
                     </a>
                 </li>
             </ul>
         </section>
 
-        <section class="areaContent2 fixed">
+        <section class="contentH fixed">
             <ul class="row">
-                <li class="areContent2__firstbox">
-                        <div class="areContent2__firstbox--text">
-                            <p class="areContent2__firstbox--text1 h2title">美玉シリーズ</p>
-                            <p class="areContent2__firstbox--text2">美玉（みたま）は、一つ一つ心を込めて育てられた愛媛県産の果実を使用したシリーズです。餡子の深い甘味と共に、爽やかな果実香る色とりどりの坊っちゃん団子をご堪能ください。</p>
-                            <p class="areContent2__firstbox--button">
-                                <a href="./index.html" class="cmnButton2">一覧はこちら</a>
+                <li class="contentH__firstbox">
+                        <div class="contentH__firstbox--text">
+                            <p class="contentH__firstbox--text1 h2title">美玉シリーズ</p>
+                            <p class="contentH__firstbox--text2">美玉（みたま）は、和洋折衷をモチーフとしたシリーズです。ミルクやチョコなどを掛け合わせた濃厚な甘さに仕上げました。宝石のような煌びやかな団子をお楽しみください。</p>
+                            <p class="contentH__firstbox--button">
+                            <a href="./index.html" class="cmnButton2">一覧はこちら</a>
                             </p>
                         </div>
                 </li>
                 <li>
                     <a href="./index.html">
                         <div>
-                           <img class="areContent2__firstbox--img" src="./img/団子1.jpg" alt="団子１">
+                           <img class="contentH__firstbox--img" src="./img/団子1.jpg" alt="団子１">
                         </div>
                     </a>
                 </li>
                 <li>
                     <a href="./index.html">
                         <div>
-                           <img class="areContent2__firstbox--img" src="./img/団子2.jpg" alt="団子１">
+                           <img class="contentH__firstbox--img" src="./img/団子2.jpg" alt="団子１">
                         </div>
                     </a>
                 </li>
                 <li>
                     <a href="./index.html">
                         <div>
-                           <img class="areContent2__firstbox--img" src="./img/団子1.jpg" alt="団子１">
+                           <img class="contentH__firstbox--img" src="./img/団子1.jpg" alt="団子１">
                         </div>
                     </a>
                 </li>
                 <li>
                     <a href="./index.html">
                         <div>
-                           <img class="areContent2__firstbox--img" src="./img/団子1.jpg" alt="団子１">
+                           <img class="contentH__firstbox--img" src="./img/団子1.jpg" alt="団子１">
                         </div>
                     </a>
                 </li>
                 <li>
                     <a href="./index.html">
                         <div>
-                           <img class="areContent2__firstbox--img" src="./img/団子1.jpg" alt="団子１">
+                           <img class="contentH__firstbox--img" src="./img/団子1.jpg" alt="団子１">
                         </div>
                     </a>
                 </li>
             </ul>
         </section>
 
-        <section class="areaContent2__img fixed">
+        <section class="contentH__img fixed">
             <img src="./img/main2.jpg" alt="背景画像">
         </section>
 
@@ -266,25 +266,25 @@
 
                 <ul>
                     <li class="areaNewsInnerList">
-                        <a class="areaNewsInnerList--title" href="./index.html">
+                        <a class="areaNewsInnerList--title" href="./news.html">
                             <span>新商品のご案内</span>
                             <span class="areaNewsInnerList--text">2025.5/2</span>
                         </a>
                     </li>
                     <li class="areaNewsInnerList">
-                        <a class="areaNewsInnerList--title" href="./index.html">
+                        <a class="areaNewsInnerList--title" href="./news.html">
                             <span>母の日ギフトについて</span>
-                            <span class="areaNewsInnerList--text">2025.4/10</span>
+                            <span class="areaNewsInnerList--text">2025.4/20</span>
                         </a>
                     </li>
                     <li class="areaNewsInnerList">
-                        <a class="areaNewsInnerList--title" href="./index.html">
+                        <a class="areaNewsInnerList--title" href="./news.html">
                             <span>JR松山駅に長期出店！</span>
                             <span class="areaNewsInnerList--text">2025.1/25</span>
                         </a>
                     </li>
                     <li class="areaNewsInnerList">
-                        <a class="areaNewsInnerList--title" href="./index.html">
+                        <a class="areaNewsInnerList--title" href="./news.html">
                             <span>年末年始の営業時間の変更について</span>
                             <span class="areaNewsInnerList--text">2024.12/16</span>
                         </a>
@@ -292,65 +292,69 @@
                 </ul>
 
                 <p>
-                    <a href="./index.html" class="cmnButton3">お知らせ一覧</a>
+                    <a href="./news.html" class="cmnButton3">お知らせ一覧</a>
                 </p>
             </div>
         </section>
 
-        <section class="areaFooter fixed">
-         <div>
-          <div class="areaFooter__text">
-            <ul class="areaFooter__text--List">
-                <li class="areaFooter__text--Listinner">
-                    <a href="./index.html">utuboya momoのこだわり</a>
-                </li>
-                <li class="areaFooter__text--Listinner">
-                    <a href="./index.html">お菓子のご紹介</a>
-                </li>
-                <li class="areaFooter__text--Listinner">
-                    <a href="./index.html">お問い合わせ</a>
-                </li>
-                <li class="areaFooter__text--Listinner">
-                    <a href="./index.html">オンラインショップ</a>
-                </li>
-            </ul>
-
-            <ul class="areaFooter__text--List">
-                <li class="areaFooter__text--Listinner">
-                    <a href="./index.html">お知らせ</a>
-                </li>
-                <li class="areaFooter__text--Listinner">
-                    <a href="./index.html">特定商取引法に基づく表記</a>
-                </li>
-                <li class="areaFooter__text--Listinner">
-                    <a href="./index.html">プライバシーポリシー</a>
-                </li>
-                <li class="areaFooter__text--Listinner">
-                    <a href="./index.html">利用規約</a>
-                </li>
-            </ul>
-          </div>
-
-          <div>
-            <p>〒790−0841<br>
-                愛媛県松山市道後湯之町14−24<br>
-                道後商店街（道後ハイカラ通り）
-            </p>
-            <a class="googlemap" href="./index.html">Google map</a>
-          </div>
-         </div>
-
-         <div class="areaFooter__sns">
-            <a href="./index.html">instagram</a>
-            <a href="./index.html">facebook</a>
-         </div>
-
-         <div class="copytext">
-            <p>©︎ utuboya momo</p>
-         </div>
-        </section>
-
+        <section class="ContentH__img fixed">
+          </section>
     </main>
+
+    <Footer class="areaFooter fixed">
+        <div>
+         <div class="areaFooter__text">
+           <ul class="areaFooter__text--List">
+               <li class="areaFooter__text--Listinner">
+                   <a href="./about.html">utuboya momoのこだわり</a>
+               </li>
+               <li class="areaFooter__text--Listinner">
+                   <a href="./kokomi.html">心実シリーズ</a>
+               </li>
+               <li class="areaFooter__text--Listinner">
+                   <a href="./nodoka.html">和華シリーズ</a>
+               </li>
+               <li class="areaFooter__text--Listinner">
+                   <a href="./mitama.html">美玉シリーズ</a>
+               </li>
+           </ul>
+
+           <ul class="areaFooter__text--List">
+               <li class="areaFooter__text--Listinner">
+                   <a href="./news.html">お知らせ</a>
+               </li>
+               <li class="areaFooter__text--Listinner">
+                   <a href="./contact.html">お問い合わせ</a>
+               </li>
+               <li class="areaFooter__text--Listinner">
+                <a href="./index.html">ホーム</a>
+            </li>
+           </ul>
+         </div>
+
+         <div>
+           <p>TEL.089−978−1611<br>
+              MAIL.info@utuboyamomo.co.jp<br>
+              〒790−0841<br>
+              愛媛県松山市道後湯之町14−24<br>
+              道後商店街（道後ハイカラ通り）
+           </p>
+           <a class="googlemap" href="https://maps.app.goo.gl/G4HR9pGTmXYfaxgu9">Google map</a>
+         </div>
+        </div>
+
+        <div class="areaFooter__sns">
+           <a class="areaFooter__sns--Text" href="https://www.instagram.com/tetsufn7/">instagram</a>
+           <a class="areaFooter__sns--Text" href="./index.html">facebook</a>
+        </div>
+
+        <div class="copy">
+           <p class="copytext">©︎ utuboya momo</p>
+           <a class="copytextLogo" href="./index.html">
+             <img src="./img/logo.svg" alt="utuboya momo"> 
+           </a>
+        </div>
+  </Footer>
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

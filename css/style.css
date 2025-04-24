@@ -102,6 +102,8 @@ a {
     }
 }
 
+/*---------------------Title-------------------------------- */
+
 .h1title {
     font-size: 30px;
 }
@@ -109,6 +111,8 @@ a {
 .h2title {
     font-size: 20px;
 }
+
+/*---------------------Button------------------------------- */
 
 .cmnButton {
     display: inline-block;
@@ -155,198 +159,7 @@ a {
     border: solid 1px #ffffff;
 }
 
-.fixed {
-    position: -webkit-sticky;/*Safari*/
-	position: sticky;
-	top: 0;/*Header高さ分で止まるようにする*/
-}
-
-.row {
-    display: grid;
-    width: 80%;
-    margin: 0 auto;
-    /* padding-top: 100px; */
-    gap: 0px;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.googlemap {
-    text-decoration: underline;
-}
-
-/*-------------------------------------------------------------
-Header
--------------------------------------------------------------*/
-
-.areaCmnheader {
-    position: absolute;
-    z-index: 2;
-    width: 100%;
-    color: #ffffff;
-}
-
-.areaCmnheader__inner {
-    display: flex;
-    margin: 0 auto;
-    padding: 30px 50px;
-    justify-content: space-between;
-}
-
-.areaCmnheader__logo {
-    width: 190px;
-}
-
-.areaCmnheader__nav {
-    display: flex;
-    margin-top: 25px;
-    transition: 0.3s;
-}
-
-.areaCmnheader__navLi:hover {
-    transition: 0.3s;
-    opacity: 0.5;
-} 
-
-.areaCmnheader__navLi {
-    margin-right: 70px;
-    position: relative;
-}
-
-.areaCmnheader__navLi:last-child {
-    margin-right: 0;
-}
-
-/*.doneクラスがついたヘッダー*/
-.areaCmnheader.dnone {
-	opacity: 0;/*透過0にして非表示に*/
-    z-index: -999;
-}
-
-/*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたら*/
-.areaCmnheader.dnone.panelactive {
-	opacity: 1;/*不透明にして出現*/
-    z-index: 999;
-}
-
-/*.doneクラスがついたヘッダーのテキストナビゲーションの形状*/
-.areaCmnheader.dnone #g-navi{
-    /*固定位置にして最背面に*/
-    position:fixed;
-	top: 0;
-    right: 0;
-	z-index: -1;
-	height: 100vh;
-    /*天地中央＆テキスト中央揃え*/  
-	display: flex;
-	justify-content: center;
-	align-items: center;
-    /*はじめは透過0に*/  
-    opacity: 0;
-	transition: 0.5s;
-}
-
-/*ハンバーガークリック後のメニュー背景*/
-.areaCmnheader.dnone.panelactive #g-navi{
-	opacity: 1;
-	z-index:2;
-	background:#e85303;
-    width: calc(100% / 3);
-    margin: 0 0 0 auto;
-}
-
-.areaCmnheader.dnone.panelactive #g-navi ul{
-	display:block;/*flexの横並びをblockにして縦並びに*/
-    content: none;
-}
-
-/*ハンバーガークリック後のメニューテキスト*/
-.areaCmnheader.dnone.panelactive #g-navi li a{
-	color: #ffffff;
-    line-height: 60px;
-	display: block;
-}
-
-.openbtn{
-    /*はじめは非表示に*/
-	display: none;
-    /*ボタンの位置*/
-	position:fixed;
-	top:20px;
-	right: 30px;
-	z-index: 999;
-    /*ボタンの形状*/
-	cursor: pointer;
-    width: 45px;
-    height: 45px;
-    mix-blend-mode: difference;
-}
-
-.openbtn span{
-    display: inline-block;
-    transition: all .4s;
-    position: absolute;
-    height: 1px;
-	background-color: #fff;
-  	width: 100%;
-}
-
-.openbtn span:nth-of-type(1) {
-	top:15px;	
-}
-
-.openbtn span:nth-of-type(2) {
-	top:25px;
-}
-
-.openbtn span:nth-of-type(3) {
-	top:35px;
-}
-
-.openbtn.active span:nth-of-type(1) {
-    transform: translateY(10px) rotate(-30deg);
-    width: 45px;
-}
-
-.openbtn.active span:nth-of-type(2) {
-	opacity: 0;
-}
-
-.openbtn.active span:nth-of-type(3){
-    transform: translateY(-10px) rotate(30deg);
-    width: 45px;
-}
-
-.fadeDown {
-    animation-name: fadeDownAnime;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    opacity: 0;
-    display: block;
-}
-@keyframes fadeDownAnime{
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-/*-------------------------------------------------------------
-Main
--------------------------------------------------------------*/
-
-.slider {
-    position: relative;
-    height: 100%;
-}
-
-.slider-item {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
+/*---------------------ScrollGuide-------------------------- */
 
 .scrolldown1 {
     position: absolute;
@@ -378,75 +191,289 @@ Main
 @keyframes pathmove{
 	0%{
 		height: 0;
-        top: 0;
-        opacity: 1;
+		top: 0;
+		opacity: 0;
 	}
-
-    80%{
-        opacity: 1;
-    }
-
+	30%{
+		height: 37px;
+		opacity: 1;
+	}
+    100%{
+		height: 0;
+		height: 17px;
+		opacity: 1;
+	}
 	100%{
-		height: 73px;
-        top: 0;
+		height: 0;
+		height: 17px;
 		opacity: 0;
 	}
 }
 
-.areaAbout {
-    padding-top: 100px;
+/*---------------------layout------------------------------- */
+
+.fixed {
+    position: -webkit-sticky;/*Safari*/
+	position: sticky;
+	top: 0;/*Header高さ分で止まるようにする*/
+}
+
+.row {
+    display: grid;
+    width: 80%;
+    margin: 0 auto;
+    /* padding-top: 100px; */
+    gap: 0px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/*---------------------SNS---------------------------------- */
+
+.googlemap {
+    text-decoration: underline;
+}
+
+/*-------------------------------------------------------------
+Header
+-------------------------------------------------------------*/
+
+.header {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    color: #ffffff;
+}
+
+.header__inner {
+    display: flex;
+    margin: 0 auto;
+    padding: 30px 50px;
+    justify-content: space-between;
+}
+
+.header__logo {
+    width: 190px;
+}
+
+/*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたら*/
+.header.panelactive {
+	opacity: 1;/*不透明にして出現*/
+    z-index: 999;
+}
+
+.header #g-navi{ 
+    opacity: 0;
+}
+
+/*ハンバーガークリック後のメニュー背景*/
+.header.panelactive #g-navi{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    top: 0;
+    right: 0;
+    position:fixed;
+	opacity: 1;
+	z-index:2;
+    height: 100vh;
+	background:#e85303;
+    width: calc(100% / 3);
+    margin: 0 0 0 auto;
+    transition: 0.5s;
+}
+
+/*ハンバーガークリック後のメニューテキスト*/
+.header.panelactive #g-navi li a{
+	color: #ffffff;
+    line-height: 60px;
+	display: block;
+    transform: 0.3s;
+}
+
+.header.panelactive #g-navi li a:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.btn{
+    /*ボタンの位置*/
+	position:fixed;
+	top:20px;
+	right: 30px;
+	z-index: 999;
+    /*ボタンの形状*/
+	cursor: pointer;
+    width: 45px;
+    height: 45px;
+    mix-blend-mode: difference;
+}
+
+.btn span{
+    display: inline-block;
+    transition: all 0.4s;
+    position: absolute;
+    height: 1px;
+	background-color: #fff;
+  	width: 100%;
+}
+
+.btn span:nth-of-type(1) {
+	top:15px;	
+}
+
+.btn span:nth-of-type(2) {
+	top:25px;
+}
+
+.btn span:nth-of-type(3) {
+	top:35px;
+}
+
+.btn.active span:nth-of-type(1) {
+    transform: translateY(10px) rotate(-30deg);
+    width: 45px;
+}
+
+.btn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.btn.active span:nth-of-type(3){
+    transform: translateY(-10px) rotate(30deg);
+    width: 45px;
+}
+
+/*-------------------------------------------------------------
+Hero
+-------------------------------------------------------------*/
+
+/*------------------------Hero-Cmn-------------------------- */
+
+.slider {
+    position: relative;
+    height: 100%;
+}
+
+.slider-item {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.cmnHeroTitle {
+    position: absolute;
+    z-index: 100;
+    top: 500px;
+    right: 0;
+    padding: 30px;
+    background-color: #ffffff;
+}
+
+/*-----------------Hero-下層ページ用-------------------------- */
+
+.contentHeroTitle {
+    position: absolute;
+    z-index: 100;
+    top: 400px;
+    right: 0;
+    padding: 30px;
+    background-color: #ffffff;
+    width: 60vh;
+}
+
+/*-------------------------------------------------------------
+About
+-------------------------------------------------------------*/
+
+/*------------------------About-Cmn------------------------- */
+
+.aboutCmn {
     height: 100vh;
     background-color: #ffffff;
     width: calc(100% / 3);
 }
 
-.areaAbout__outer {
+/*------------------------About-Home------------------------ */
+
+.aboutH__inner {
+    padding-top: 100px;
     margin: 0 auto;
     writing-mode: vertical-rl;
     -ms-writing-mode: tb-rl;
     font-feature-settings: 'pkna';
 }
 
-.areaAbout__inner--title {
+.aboutH__inner--title {
     padding-left: 30px;
 }
 
-.areaAbout__inner--text {
+.aboutH__inner--text {
     padding-left: 60px;
 }
 
-.areaAbout__inner--video {
+.aboutH__inner--video {
     width: 45%;
     display: flex;
     justify-content: space-between;
 }
 
-.areaAbout__inner--video1 {
+.aboutH__inner--video1 {
     display: inline-block;
     width: 30%;
     clip-path: circle(45% at 90% 50%);
 }
 
-.areaAbout__inner--video2 {
+.aboutH__inner--video2 {
     display: inline-block;
     width: 40%;
     clip-path: circle(20% at 50% 20%);
 }
 
-.areaContent__img {
+/*-----------------About-下層ページ用------------------------- */
+
+.aboutU__inner {
+    padding: 40px;
+}
+
+.aboutU__inner--title {
+    padding: 30px 0;
+    line-height: 40px;
+}
+
+.aboutU2 {
+    height: 100vh;
+    background-color: #ffffff;
+    width: calc(100% / 3);
+    margin: 0 auto;
+}
+
+.aboutU3 {
+    height: 100vh;
+    background-color: #ffffff;
+    width: calc(100% / 3);
+    margin: 0 0 0 auto;
+}
+
+/*-------------------------------------------------------------
+Content
+-------------------------------------------------------------*/
+
+/*------------------------content-Home---------------------- */
+
+.contentH__Ex--img {
     height: 100vh;
     width: calc(100vw * 2 / 3);
     margin-left: auto;
 }
 
-.areaContent {
+.contentH__Ex {
     margin: 0 0 0 auto;
     height: 100vh;
     background-color: #f3f3f3;
     width: calc(100% / 3);
 }
 
-.areaContent__outer {
+.contentH__Ex--outer {
     margin-right: auto;
     padding-top: 100px;
     margin: 0 auto;
@@ -455,20 +482,20 @@ Main
     font-feature-settings: 'pkna';
 }
 
-.areaContent__outer--title {
+.contentH__Ex--outerTitle {
     padding-left: 30px;
 }
 
-.areaContent2 {
+.contentH {
     background-color: #ffffff;
 }
 
-.areContent2__firstbox {
+.contentH__firstbox {
     position: relative;
     background-color: #f3f3f3;
 }
 
-.areContent2__firstbox--text {
+.contentH__firstbox--text {
     position: absolute;
     margin: 60px;
     top: 0;
@@ -476,26 +503,346 @@ Main
     flex-direction: column;
 }
 
-.areContent2__firstbox--text2 {
+.contentH__firstbox--text2 {
     margin-top: 30px;
 }
 
-.areContent2__firstbox--button {
+.contentH__firstbox--button {
     margin-top: 30px;
 }
 
-.areContent2__firstbox--img {
+.ContentH__firstbox--img {
     transition: 0.3s;
 }
 
-.areContent2__firstbox--img:hover {
+.ContentH__firstbox--img:hover {
     opacity: 0.5;
     transition: 0.3s;
 }
 
-.areaContent2__img {
+.ContentH__img {
     height: 100vh;
 }
+
+/*-----------------content-下層ページ用----------------------- */
+
+/*------------------------content-Cmn----------------------- */
+
+.contentCmnU1 {
+    height: 100vh;
+    background-color: #ffffff;
+    width: calc(100% / 3);
+}
+
+.contentCmnU2 {
+    height: 100vh;
+    background-color: #ffffff;
+    width: calc(100% / 3);
+    margin: 0 auto;
+}
+
+.contentCmnU3 {
+    height: 100vh;
+    background-color: #ffffff;
+    width: calc(100% / 3);
+    margin: 0 0 0 auto;
+}
+
+.contentCmnU__inner {
+    padding: 40px;
+    position: relative;
+}
+
+.contentCmnU__inner--img {
+    overflow: hidden;
+}
+
+.contentCmnU__inner--title {
+    padding-bottom: 7px;
+    line-height: 40px;
+}
+
+.contentCmnU__inner--explane {
+    margin-bottom: 30px;
+}
+
+/*------------------------content-kokomi-------------------- */
+
+.Mikan {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    background-color: #ed7534;
+    color: #ffd753;
+    padding: 10px;
+    width: 70%;
+}
+
+.Kiwi {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    background-color: #af840d;
+    color: #8dc403;
+    padding: 10px;
+    width: 70%;
+}
+
+.Kuri {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    background-color: #913c0f;
+    color: #cc9921;
+    padding: 10px;
+    width: 70%;
+}
+
+.Remon {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    background-color: #ffe205;
+    color: #c49d03;
+    padding: 10px;
+    width: 70%;
+}
+
+.Ichigo {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    background-color: #e21f1f;
+    color: #f0b6b6;
+    padding: 10px;
+    width: 70%;
+}
+
+.Budou {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    background-color: #ab1fe2;
+    color: #f8b7ff;
+    padding: 10px;
+    width: 70%;
+}
+
+.Banana {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    background-color: #ffd900;
+    color: #c7b700;
+    padding: 10px;
+    width: 70%;
+}
+
+.Momo {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    background-color: #ff88d5;
+    color: #c70071;
+    padding: 10px;
+    width: 70%;
+}
+
+.Meron {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    background-color: #170097;
+    color: #b09eff;
+    padding: 10px;
+    width: 70%;
+}
+
+/*------------------------content-nodoka-------------------- */
+
+.Mattya {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    background-color: #00510b;
+    color: #00c02a;
+    padding: 10px;
+    width: 70%;
+}
+
+.Kinako {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    background-color: #b28616;
+    color: #5f4400;
+    padding: 10px;
+    width: 70%;
+}
+
+.Kurogoma {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px;
+    width: 70%;
+}
+
+.Ume {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    background-color: #c21919;
+    color: #ffa3a3;
+    padding: 10px;
+    width: 70%;
+}
+
+.Mochi {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    background-color: #dfdfdf;
+    color: #676767;
+    padding: 10px;
+    width: 70%;
+}
+
+.Miso {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    background-color: #e69d00;
+    color: #7c5500;
+    padding: 10px;
+    width: 70%;
+}
+
+.Syoyu {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    background-color: #5a3700;
+    color: #e29b00;
+    padding: 10px;
+    width: 70%;
+}
+
+.Shio {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    background-color: #67c0fb;
+    color: #c6f7ff;
+    padding: 10px;
+    width: 70%;
+}
+
+.Satumaimo {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    background-color: #8f249d;
+    color: #fbbc00;
+    padding: 10px;
+    width: 70%;
+}
+
+/*------------------------content-mitama-------------------- */
+
+.Namakurimu {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    background-color: #fff5cb;
+    color: #bf9b2e;
+    padding: 10px;
+    width: 70%;
+}
+
+.Cyoko {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    background-color: #945303;
+    color: #000000;
+    padding: 10px;
+    width: 70%;
+}
+
+.tizu {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    background-color: #ffaf01;
+    color: #fbe200;
+    padding: 10px;
+    width: 70%;
+}
+
+.Kyarameru {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    background-color: #c48000;
+    color: #663c00;
+    padding: 10px;
+    width: 70%;
+}
+
+.Hatimitu {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    background-color: #fff200;
+    color: #b58400;
+    padding: 10px;
+    width: 70%;
+}
+
+.Ramune {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    background-color: #2fecf9;
+    color: #0095d4;
+    padding: 10px;
+    width: 70%;
+}
+
+.Purin {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    background-color: #ffd015;
+    color: #8f4500;
+    padding: 10px;
+    width: 70%;
+}
+
+.Bata {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    background-color: #ffd573;
+    color: #9a7401;
+    padding: 10px;
+    width: 70%;
+}
+
+.Kohi {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    background-color: #581d00;
+    color: #e73002;
+    padding: 10px;
+    width: 70%;
+}
+
+/*---------------------------News--------------------------- */
 
 .areaNews {
     background-color: #e85303;
@@ -528,6 +875,8 @@ Main
     opacity: 0.5;
     transition: 0.3s;
 }
+
+/*---------------------------Footer------------------------- */
 
 .areaFooter {
     background-color: #e85303;
@@ -564,8 +913,129 @@ Main
 }
 
 .areaFooter__sns {
-    text-decoration: underline;
     display: flex;
     flex-direction: column;
+}
+
+.areaFooter__sns--Text {
+    text-decoration: underline;
+}
+
+.copy {
+    display: flex;
+    align-items: center;
+}
+
+.copytext {
+    margin-right: 100px;
+}
+
+.copytextLogo {
+    width: 190px;
+}
+
+.contactMain {
+    height: 27vh;
+    background-color: #e85303;
+}
+
+.contactForm {
+    background-color: #ffffff;
+    height: 100vh;
+}
+
+.contactForm__Inner {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 70px;
+}
+
+.contactForm__Inner--Title {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.contactForm__Inner--Text {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.contactForm__Inner--Send {
+    margin-top: 50px;
+    text-align: center;
+    border: 0.5px solid #878787;
+    transition: 0.3s;
+}
+
+.contactForm__Inner--Send:hover {
+    background-color: #878787;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.contactForm__Inner--SendText {
+    padding: 10px;
+}
+
+.contactTable {
+    display: block;
+    width: 100%;
+}
+
+.contactTable__List {
+    align-items: flex-start;
+}
+
+.contactTable__List--Name {
+    padding: 30px 50px 50px 0;
+    font-weight: normal;
+}
+
+.contactTable__List--Form input {
+    margin: 30px 0;
+    border: 0.5px solid #878787;
+}
+
+.contactTable__List--LaForm {
+    border: 0.5px solid #878787;
+}
+
+.contactTable__List--LaFormTA {
+    resize: none;
+}
+
+.contactForm__Inner--copy {
+    font-size: 10px;
+    display: block;
+    text-align: center;
+    padding: 50px 0 20px 0;
+}
+
+.News {
+    height: 100vh;
+    background-color: #f3f3f3;
+    width: calc(100vw * 2 / 3);
+    margin-left: auto;
+}
+
+.News__outer {
+    padding: 70px;
+    display: flex;
+}
+
+.News__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.News__img {
+    padding-right: 80px;
+    height: 100%;
+}
+
+.News__inner--title {
+    padding-bottom: 30px;
 }
   

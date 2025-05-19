@@ -1,0 +1,1290 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*-------------------------------------------------------------
+Common
+-------------------------------------------------------------*/
+
+/* * {
+    outline: 2px solid blue;
+}  */
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000;
+    font-family: "Shippori Mincho", serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.8;
+    letter-spacing: 0.1em;
+    font-style: normal;
+}
+
+body ::-moz-selection {
+    background-color: #e85303;
+    color: #ffffff;
+}
+
+body ::selection {
+    background-color: #e85303;
+    color: #ffffff;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+a {
+    color: #1D1D1D;
+    text-decoration: none;
+}
+@media (any-hover: hover) {
+    a:hover {
+        text-decoration: none;
+    }
+}
+
+/*---------------------Title-------------------------------- */
+
+.h1title {
+    font-size: 30px;
+}
+
+.h2title {
+    font-size: 20px;
+}
+
+/*---------------------Button------------------------------- */
+
+.cmnButton {
+    display: inline-block;
+    color: #878787;
+    border: solid 1px #878787;
+    padding: 20px 10px;
+    border-radius: 999px;
+    transition: .3s;
+}
+
+.cmnButton:hover {
+    background-color: #e85303;
+    color: #ffffff;
+    border: solid 1px #e85303;
+}
+
+.cmnButton2 {
+    display: inline-block;
+    border: solid 1px ;
+    padding: 10px 20px;
+    border-radius: 999px;
+    transition: .3s;
+    text-align: center;
+}
+
+.cmnButton2:hover {
+    background-color: #e85303;
+    color: #ffffff;
+    border: solid 1px #e85303;
+}
+
+.cmnButton3 {
+    display: inline-block;
+    border: solid 1px #ffffff;
+    padding: 10px 20px;
+    border-radius: 999px;
+    transition: .3s;
+    text-align: center;
+}
+
+.cmnButton3:hover {
+    background-color: #ffffff;
+    color: #e85303;
+    border: solid 1px #ffffff;
+}
+
+/*------------------------responsive Phone------------------ */
+
+@media  screen and (max-width: 767px) {
+    .cmnButton2 {
+        display: inline-block;
+        border: solid 1px ;
+        padding: 4px 15px;
+        border-radius: 999px;
+        transition: .3s;
+        text-align: center;
+        font-size: 12px;
+    }
+    
+    .cmnButton2:hover {
+        background-color: #e85303;
+        color: #ffffff;
+        border: solid 1px #e85303;
+    }
+}
+
+/*---------------------ScrollGuide-------------------------- */
+
+.scrolldown1 {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50px;
+    text-orientation: sideways;
+    color: #ffffff;
+    height: 100px;
+}
+
+.sccrolldown1__p {
+    writing-mode: vertical-rl;
+    font-size: 10px;
+}
+
+.scrolldown1::after{
+	content: "";
+	position: absolute;
+	top: 50%;
+	width: 1px;
+	height: 100px;
+    right: 25px;
+	background: #ffffff;
+	animation: pathmove 3s ease infinite;
+	opacity: 0;
+}
+
+@keyframes pathmove{
+	0%{
+		height: 0;
+		top: 0;
+		opacity: 0;
+	}
+	30%{
+		height: 37px;
+		opacity: 1;
+	}
+    100%{
+		height: 0;
+		height: 17px;
+		opacity: 1;
+	}
+	100%{
+		height: 0;
+		height: 17px;
+		opacity: 0;
+	}
+}
+
+/*------------------------responsive Phone------------------ */
+
+@media  screen and (max-width: 767px) {
+    .scrolldown1 {
+        position: absolute;
+        display: inline-block;
+        top: 50%;
+        left: 50px;
+        text-orientation: sideways;
+        color: #ffffff;
+        height: 100px;
+    }
+
+    .sccrolldown1__p {
+        writing-mode: vertical-rl;
+        font-size: 15px;
+    }
+
+    .scrolldown1::after{
+        content: "";
+        position: absolute;
+        top: 80%;
+        width: 1px;
+        height: 300px;
+        right: 10px;
+        background: #ffffff;
+        animation: pathmove 3s ease infinite;
+        opacity: 0;
+    }
+}
+
+/*---------------------layout------------------------------- */
+
+.fixed {
+    position: -webkit-sticky;/*Safari*/
+	position: sticky;
+	top: 0;/*Header高さ分で止まるようにする*/
+}
+
+.row {
+    display: grid;
+    width: 80%;
+    margin: 0 auto;
+    /* padding-top: 100px; */
+    gap: 0px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/*------------------------responsive Phone------------------ */
+
+@media screen and (max-width: 767px) {
+
+    .row {
+        display: grid;
+        bottom: 0;
+        width: 100%;
+        margin: 0 auto;
+        /* padding-top: 100px; */
+        gap: 0px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/*------------------------responsive Pad-------------------- */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .row {
+        display: grid;
+        bottom: 0;
+        width: 90%;
+        margin: 0 auto;
+        height: 100vh;
+        /* padding-top: 100px; */
+        gap: 0px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*---------------------SNS---------------------------------- */
+
+.googlemap {
+    text-decoration: underline;
+}
+
+/*-------------------------------------------------------------
+Header
+-------------------------------------------------------------*/
+
+.header {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    color: #ffffff;
+}
+
+.header__inner {
+    padding: 30px 40px;
+}
+
+.header__logo {
+    width: clamp(10%, 40vmin, 200px);
+}
+
+/*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたら*/
+.header.panelactive {
+	opacity: 1;/*不透明にして出現*/
+    z-index: 999;
+}
+
+.header #g-navi{ 
+    opacity: 0;
+}
+
+/*ハンバーガークリック後のメニュー背景*/
+.header.panelactive #g-navi{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    top: 0;
+    right: 0;
+    position:fixed;
+	opacity: 1;
+	z-index:2;
+    height: 100vh;
+	background:#e85303;
+    width: calc(100% / 3);
+    margin: 0 0 0 auto;
+    transition: 0.5s;
+}
+
+/*ハンバーガークリック後のメニューテキスト*/
+.header.panelactive #g-navi li a{
+	color: #ffffff;
+    line-height: 60px;
+	display: block;
+    transform: 0.3s;
+}
+
+.header.panelactive #g-navi li a:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.btn{
+    /*ボタンの位置*/
+	position:fixed;
+	top:20px;
+	right: 30px;
+	z-index: 999;
+    /*ボタンの形状*/
+	cursor: pointer;
+    width: 45px;
+    height: 45px;
+    mix-blend-mode: difference;
+}
+
+.btn span{
+    display: inline-block;
+    transition: all 0.4s;
+    position: absolute;
+    height: 1px;
+	background-color: #fff;
+  	width: 100%;
+}
+
+.btn span:nth-of-type(1) {
+	top:15px;	
+}
+
+.btn span:nth-of-type(2) {
+	top:25px;
+}
+
+.btn span:nth-of-type(3) {
+	top:35px;
+}
+
+.btn.active span:nth-of-type(1) {
+    transform: translateY(10px) rotate(-30deg);
+    width: 45px;
+}
+
+.btn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.btn.active span:nth-of-type(3){
+    transform: translateY(-10px) rotate(30deg);
+    width: 45px;
+}
+
+/*------------------------responsive Phone------------------ */
+
+@media  screen and (max-width: 767px) {
+    .header.panelactive #g-navi{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        top: 0;
+        right: 0;
+        position:fixed;
+        opacity: 1;
+        z-index:2;
+        height: 100vh;
+        background:#e85303;
+        width: 100%;
+        margin: 0 0 0 auto;
+        transition: 0.5s;
+    }
+}
+
+/*-------------------------------------------------------------
+Hero
+-------------------------------------------------------------*/
+
+/*------------------------Hero-Cmn-------------------------- */
+
+.slider {
+    height: 100vh;
+}
+
+.slick-slide img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.cmnHeroTitle {
+    position: absolute;
+    z-index: 100;
+    top: 500px;
+    right: 0;
+    padding: 30px;
+    background-color: #ffffff;
+}
+
+/*-----------------Hero-下層ページ用-------------------------- */
+
+.contentHeroTitle {
+    position: absolute;
+    z-index: 100;
+    top: 400px;
+    right: 0;
+    padding: 30px;
+    background-color: #ffffff;
+    width: 60vh;
+}
+
+/*------------------------responsive Phone------------------ */
+
+@media screen and (max-width: 767px) {
+    .contentHeroTitle {
+        position: absolute;
+        z-index: 100;
+        top: 400px;
+        right: 0;
+        padding: 25px;
+        background-color: #ffffff;
+        width: 70%;
+    }
+}
+
+/*------------------------responsive Phone------------------ */
+
+@media screen and (max-width: 767px) {
+    .cmnHeroTitle {
+        font-size: 15px;
+        position: absolute;
+        z-index: 100;
+        top: 500px;
+        right: 0;
+        padding: 30px;
+        background-color: #ffffff;
+    }    
+}
+
+/*-------------------------------------------------------------
+About
+-------------------------------------------------------------*/
+
+/*------------------------About-Cmn------------------------- */
+
+.aboutCmn {
+    height: 100vh;
+    background-color: #ffffff;
+    width: calc(100% / 3);
+}
+
+/*------------------------responsive Phone------------------ */
+
+@media screen and (max-width: 767px) {
+    .aboutCmn {
+        width: 100%;
+        height: 100vh;
+        background-color: #ffffff;
+    }
+}
+
+/*------------------------responsive Pad-------------------- */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .aboutCmn {
+        height: 100vh;
+        background-color: #ffffff;
+        width: calc(100% * 1 / 2);
+    }
+}
+
+/*------------------------About-Home------------------------ */
+
+.aboutH__inner {
+    padding-top: 100px;
+    margin: 0 auto;
+    writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    font-feature-settings: 'pkna';
+}
+
+.aboutH__inner--title {
+    padding-left: 30px;
+}
+
+.aboutH__inner--text {
+    padding-left: 40px;
+}
+
+/*------------------------responsive Pad-------------------- */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .aboutH__inner--title {
+        padding-left: 10px;
+    }
+    .aboutH__inner--text {
+        padding-left: 20px;
+    }
+}
+
+/*-----------------About-下層ページ用------------------------- */
+
+.aboutU__inner {
+    padding: 30px;
+}
+
+.aboutU__inner--title {
+    padding: 30px 0;
+    line-height: 40px;
+}
+
+.aboutU1 {
+    height: 100vh;
+    background-color: #ffffff;
+    width: calc(100% / 3);
+}
+
+.aboutU2 {
+    height: 100vh;
+    background-color: #ffffff;
+    width: calc(100% / 3);
+    margin: 0 auto;
+}
+
+.aboutU3 {
+    height: 100vh;
+    background-color: #ffffff;
+    width: calc(100% / 3);
+    margin: 0 0 0 auto;
+}
+
+/*------------------------responsive Phone------------------ */
+
+@media screen and (max-width: 767px) {
+    .aboutU2 {
+        width: 100%;
+        height: 100vh;
+        background-color: #ffffff;
+    }
+    
+    .aboutU3 {
+        width: 100%;
+        height: 100vh;
+        background-color: #ffffff;
+    }
+}
+
+/*-------------------------------------------------------------
+Content
+-------------------------------------------------------------*/
+
+/*------------------------content-Home---------------------- */
+
+.contentH__Ex--img {
+    height: 100vh;
+    width: calc(100% * 2 / 3);
+    margin-left: auto;
+}
+
+.contentH__Ex {
+    margin: 0 0 0 auto;
+    height: 100vh;
+    background-color: #f3f3f3;
+    width: calc(100% / 3);
+}
+
+.contentH__Ex--outer {
+    margin-right: auto;
+    padding-top: 100px;
+    margin: 0 auto;
+    writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    font-feature-settings: 'pkna';
+}
+
+.contentH__Ex--outerTitle {
+    padding-left: 30px;
+}
+
+/*------------------------responsive Phone------------------ */
+
+@media screen and (max-width: 767px) {
+
+    .contentH__Ex {
+        width: 100%;
+        height: 100vh;
+        background-color: #f3f3f3;
+    }
+
+    .contentH__Ex--img {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .contentH__Ex--img img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        object-position: left center;
+    }
+
+    .content__between-img img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+}
+
+/*------------------------responsive Pad-------------------- */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .contentH__Ex {
+        width: calc(100% * 1 / 2);
+        margin-left: auto;
+        height: 100vh;
+        background-color: #f3f3f3;
+    }
+    .contentH__Ex--img {
+        height: 100vh;
+        width: calc(100% * 1 / 2);
+        margin-left: auto;
+    }
+    .contentH__Ex--img img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        object-position: left center;
+    }
+}
+
+.contentH {
+    background-color: #ffffff;
+    height: 100vh;
+}
+
+.contentH__firstbox {
+    position: relative;
+    background-color: #f3f3f3;
+}
+
+.contentH__firstbox--text {
+    position: absolute;
+    margin: 60px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.contentH__firstbox--text2 {
+    margin-top: 30px;
+}
+
+.contentH__firstbox--button {
+    margin-top: 30px;
+}
+
+.ContentH__firstbox--img:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.ContentH__img {
+    height: 100vh;
+}
+
+.contentH__BackImg img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/*------------------------responsive Phone------------------ */
+
+@media screen and (max-width: 767px) {
+    .contentH__firstbox--text2 {
+        margin-top: 240px;
+    }
+
+    .contentH__firstbox--button {
+        margin-top: 15px;
+    }
+
+    .contentH__firstbox--text {
+        position: absolute;
+        margin: 40px;
+        width: 85%;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*------------------------responsive Pad-------------------- */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .contentH__firstbox--text {
+        position: absolute;
+        margin: 30px;
+        width: 85%;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*-----------------content-下層ページ用----------------------- */
+
+/*------------------------content-Cmn----------------------- */
+
+.contentCmnU1 {
+    height: 100vh;
+    background-color: #ffffff;
+    width: calc(100% / 3);
+}
+
+.contentCmnU2 {
+    height: 100vh;
+    background-color: #ffffff;
+    width: calc(100% / 3);
+    margin: 0 auto;
+}
+
+.contentCmnU3 {
+    height: 100vh;
+    background-color: #ffffff;
+    width: calc(100% / 3);
+    margin: 0 0 0 auto;
+}
+
+.contentCmnU__inner {
+    padding: 40px;
+    position: relative;
+}
+
+.contentCmnU__inner--img {
+    overflow: hidden;
+}
+
+.contentCmnU__inner--Cmn {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    padding: 10px;
+    width: 70%;
+}
+
+.contentCmnU__inner--title {
+    padding-bottom: 7px;
+    line-height: 40px;
+}
+
+.contentCmnU__inner--explane {
+    margin-bottom: 30px;
+}
+
+/*------------------------responsive Phone------------------ */
+
+@media screen and (max-width: 767px) {
+
+    .contentCmnU1 {
+        width: 100%;
+        height: 100vh;
+        background-color: #ffffff;
+    }
+    .contentCmnU2 {
+        width: 100%;
+        height: 100vh;
+        background-color: #ffffff;
+    }
+    
+    .contentCmnU3 {
+        width: 100%;
+        height: 100vh;
+        background-color: #ffffff;
+    }
+    .contentCmnU__inner {
+        padding: 20px;
+        position: relative;
+    }
+    .contentCmnU__inner--Cmn {
+        position: absolute;
+        top: 400px;
+        left: 0px;
+        padding: 10px;
+        width: 70%;
+    }
+    .contentCmnU__inner--img img {
+        width: 100%;
+        height: 90vh;
+        object-fit: cover;
+    }
+}
+
+/*------------------------responsive Pad-------------------- */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .contentCmnU1 {
+        height: 100vh;
+        background-color: #ffffff;
+        width: calc(100% * 1 / 2);
+    }
+}
+
+/*------------------------content-kokomi-------------------- */
+
+.Mikan {
+    background-color: #ed7534;
+    color: #ffd753;
+}
+
+.Kiwi {
+    background-color: #af840d;
+    color: #8dc403;
+}
+
+.Kuri {
+    background-color: #913c0f;
+    color: #cc9921;
+}
+
+.Remon {
+    background-color: #ffe205;
+    color: #c49d03;
+}
+
+.Ichigo {
+    background-color: #e21f1f;
+    color: #f0b6b6;
+}
+
+.Budou {
+    background-color: #ab1fe2;
+    color: #f8b7ff;
+}
+
+.Banana {
+    background-color: #ffd900;
+    color: #c7b700;
+}
+
+.Momo {
+    background-color: #ff88d5;
+    color: #c70071;
+}
+
+.Meron {
+    background-color: #170097;
+    color: #b09eff;
+}
+
+/*------------------------content-nodoka-------------------- */
+
+.Mattya {
+    background-color: #00510b;
+    color: #00c02a;
+}
+
+.Kinako {
+    background-color: #b28616;
+    color: #5f4400;
+}
+
+.Kurogoma {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.Ume {
+    background-color: #c21919;
+    color: #ffa3a3;
+}
+
+.Mochi {
+    background-color: #dfdfdf;
+    color: #676767;
+}
+
+.Miso {
+    background-color: #e69d00;
+    color: #7c5500;
+}
+
+.Syoyu {
+    background-color: #5a3700;
+    color: #e29b00;
+}
+
+.Shio {
+    background-color: #67c0fb;
+    color: #c6f7ff;
+}
+
+.Satumaimo {
+    background-color: #8f249d;
+    color: #fbbc00;
+}
+
+/*------------------------content-mitama-------------------- */
+
+.Namakurimu {
+    background-color: #fff5cb;
+    color: #bf9b2e;
+}
+
+.Cyoko {
+    background-color: #945303;
+    color: #000000;
+}
+
+.tizu {
+    background-color: #ffaf01;
+    color: #fbe200;
+}
+
+.Kyarameru {
+    background-color: #c48000;
+    color: #663c00;
+}
+
+.Hatimitu {
+    background-color: #fff200;
+    color: #b58400;
+}
+
+.Ramune {
+    background-color: #2fecf9;
+    color: #0095d4;
+}
+
+.Purin {
+    background-color: #ffd015;
+    color: #8f4500;
+}
+
+.Bata {
+    background-color: #ffd573;
+    color: #9a7401;
+}
+
+.Kohi {
+    background-color: #581d00;
+    color: #e73002;
+}
+
+/*---------------------------News--------------------------- */
+
+.areaNews {
+    background-color: #e85303;
+    height: 100vh;
+    color: #ffffff;
+    width: calc(100% / 3);
+}
+
+.areaNewaInner {
+    padding: 50px;
+}
+
+.areaNewsInnerTitle {
+    padding-bottom: 30px;
+}
+
+.areaNewsInnerList {
+    margin-bottom: 40px;
+    line-height: 30px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.areaNewsInnerList--title {
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.areaNewsInnerList--title:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+/*------------------------responsive Phone------------------ */
+
+@media screen and (max-width: 767px) {
+    .areaNews {
+        background-color: #e85303;
+        height: 100vh;
+        color: #ffffff;
+        width: 100%;
+    }
+}
+
+/*---------------------------Footer------------------------- */
+
+.areaFooter {
+    background-color: #e85303;
+    color: #ffffff;
+    height: 100vh;
+    width: calc(100% * 2 / 3);
+    margin-left: auto;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.areaFooter__text {
+    display: flex;
+    padding-bottom: 50px;
+}
+
+.areaFooter__text--List {
+    margin-right: 30px;
+}
+
+.areaFooter__text--List a {
+    transition: 0.3s;
+}
+
+.areaFooter__text--List a:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.areaFooter__text--Listinner {
+    padding-bottom: 10px;
+}
+
+.areaFooter__sns {
+    display: flex;
+    flex-direction: column;
+}
+
+.areaFooter__sns--Text {
+    text-decoration: underline;
+}
+
+.copy {
+    display: flex;
+    align-items: center;
+}
+
+.copytext {
+    margin-right: 100px;
+}
+
+.copytextLogo {
+    width: 190px;
+}
+
+/*------------------------responsive Phone------------------ */
+
+@media screen and (max-width: 767px) {
+    .areaFooter {
+        background-color: #e85303;
+        height: 100vh;
+        color: #ffffff;
+        width: 100%;
+        padding: 40px;
+        font-size: 14px;
+    }
+
+    .areaFooter__text {
+        display: flex;
+        padding-bottom: 30px;
+    }
+
+    .copy {
+        display: block
+    }
+
+    .copytext {
+        font-size: 12px;
+        margin-bottom: 30px;
+    }
+
+    .copytextLogo {
+        display: block;
+        width: 190px;
+    }
+}
+
+.contactMain {
+    height: 27vh;
+    background-color: #e85303;
+}
+
+.contactForm {
+    background-color: #ffffff;
+    height: 100vh;
+}
+
+.contactForm__Inner {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 70px;
+}
+
+.contactForm__Inner--Title {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.contactForm__Inner--Text {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.contactForm__Inner--Send {
+    margin-top: 50px;
+    text-align: center;
+    border: 0.5px solid #878787;
+    transition: 0.3s;
+}
+
+.contactForm__Inner--Send:hover {
+    background-color: #878787;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.contactForm__Inner--SendText {
+    padding: 10px;
+}
+
+.contactTable {
+    display: block;
+    width: 100%;
+}
+
+.contactTable__List {
+    align-items: flex-start;
+}
+
+.contactTable__List--Name {
+    padding: 30px 50px 50px 0;
+    font-weight: normal;
+}
+
+.contactTable__List--Form input {
+    margin: 30px 0;
+    border: 0.5px solid #878787;
+}
+
+.contactTable__List--LaForm {
+    border: 0.5px solid #878787;
+}
+
+.contactTable__List--LaFormTA {
+    resize: none;
+}
+
+.contactForm__Inner--copy {
+    font-size: 10px;
+    display: block;
+    text-align: center;
+    padding: 50px 0 20px 0;
+}
+
+/*------------------------responsive Phone------------------ */
+
+@media screen and (max-width: 767px) {
+    .contactForm__Inner {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 70px;
+    }
+    .contactTable__List {
+        display: flex;
+        flex-direction: column;
+    }
+    .contactTable__List--Name {
+        padding: 30px 50px 0 0;
+        font-weight: normal;
+    }
+}
+
+.News {
+    height: 100vh;
+    background-color: #f3f3f3;
+    width: calc(100vw * 2 / 3);
+    margin-left: auto;
+}
+
+.News__outer {
+    padding: 70px;
+    display: flex;
+}
+
+.News__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.News__img {
+    padding-right: 80px;
+    height: 100%;
+}
+
+.News__inner--title {
+    padding-bottom: 30px;
+}
+
+@media screen and (max-width: 767px) {
+
+    .News {
+        width: 100%;
+        height: 100vh;
+        background-color: #f3f3f3;
+    }
+    .News__outer {
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    .News__img {
+        padding: 0 0 30px 0;
+        height: auto;
+    }
+}
+  
